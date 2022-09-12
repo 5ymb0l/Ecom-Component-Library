@@ -10,14 +10,29 @@
   "scripts": {
     "build": "rimraf dist/ && npm run build:esm && npm run build:cjs",
     "build:esm": "tsc",
-    "build:cjs": "tsc --module CommonJS --outDir dist/cjs"
+    "build:cjs": "tsc --module CommonJS --outDir dist/cjs",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "author": "Pratik Gangawane",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.19.0",
+    "@storybook/addon-actions": "^6.5.10",
+    "@storybook/addon-essentials": "^6.5.10",
+    "@storybook/addon-interactions": "^6.5.10",
+    "@storybook/addon-knobs": "^5.3",
+    "@storybook/addon-links": "^6.5.10",
+    "@storybook/addon-ondevice-actions": "^5.3.23",
+    "@storybook/addon-ondevice-knobs": "^5.3.26",
+    "@storybook/builder-webpack4": "^6.5.10",
+    "@storybook/manager-webpack4": "^6.5.10",
+    "@storybook/react": "^6.5.10",
+    "@storybook/testing-library": "^0.0.13",
     "@types/node": "^18.7.16",
     "@types/react": "^18.0.18",
     "@types/react-dom": "^18.0.6",
+    "babel-loader": "^8.2.5",
     "mkdirp": "^1.0.4",
     "prettier": "2.7.1",
     "react": "^18.2.0",
@@ -28,5 +43,9 @@
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "dependencies": {
+    "@storybook/react-native": "^5.3.25",
+    "storybook": "^6.5.10"
   }
 }
